@@ -7,7 +7,7 @@ const Wishes = () => {
   const [name, setName] = useState('');
   const festivalName = 'Diwali'; // Replace with the actual festival name
   const festivalImageUrl = '/festival.jpg'; // Replace with the URL of your festival image
-
+  const festivalImageUrl2 = `${process.env.NEXT_PUBLIC_APP_URL}/festival.jpg`; 
   const router = useRouter();
   const { wishId } = router.query;
 
@@ -25,7 +25,7 @@ const Wishes = () => {
     // Include the image URL in the WhatsApp message
     const whatsappMessage = `${encodeURIComponent(
       message
-    )}%0A${encodeURIComponent(wishUrl)}%0A${encodeURIComponent(festivalImageUrl)}`;
+    )}%0A${encodeURIComponent(wishUrl)}%0A${encodeURIComponent(festivalImageUrl2)}`;
 
     // Construct the WhatsApp share link
     const whatsappLink = `https://wa.me/?text=${whatsappMessage}`;
