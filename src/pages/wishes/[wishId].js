@@ -1,9 +1,11 @@
 // pages/wishes/[wishId].js
+"use-client";
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import styles from '../../styles/Wishes.module.css';
 
 const Wishes = () => {
-  console.log("envv",process.env.NEXT_PUBLIC_APP_URL)
+  console.log("envv",process.env.NEXT_PUBLIC_APP_URL,styles)
   const [name, setName] = useState('');
   const festivalName = 'Diwali'; // Replace with the actual festival name
   const festivalImageUrl = '/festival.jpg'; // Replace with the URL of your festival image
@@ -37,20 +39,25 @@ const Wishes = () => {
   return (
     <div>
       <h1>Share Your Festival Wishes</h1>
+      <div className={styles['image-container']}>
       <img src={festivalImageUrl} alt={festivalName} />
+      </div>
       <form>
-        <label>
-          Your Name:
+      <div className={styles['input-container']}>
+          <label>Your Name:</label>
           <input
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            placeholder="Enter your name"
           />
-        </label>
+          </div>
       </form>
       <p>Share your wishes:</p>
-      <input type="text" value={generateShareLink()} readOnly />
-      <button onClick={openWhatsApp}>Share on WhatsApp</button>
+      {/* <input type="text" value={generateShareLink()} readOnly /> */}
+      <div className={styles['button-container']}>
+        <button onClick={openWhatsApp}>Share on WhatsApp</button>
+      </div>
     </div>
   );
 };

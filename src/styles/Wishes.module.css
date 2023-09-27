@@ -1,0 +1,57 @@
+/* styles/Wishes.module.css */
+.image-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.input-container label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.input-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.input-container input[type="text"]:focus {
+  border-color: #0070f3;
+  outline: none;
+}
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #0f9e46; /* Blue color, change to your preferred color */
+  color: #fff; /* Text color, change to your preferred color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button-container button:hover {
+  background-color: #0050c8; /* Change to a slightly darker shade on hover */
+}
