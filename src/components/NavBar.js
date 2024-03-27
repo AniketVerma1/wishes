@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 const NavBar = ({ activeTab, handleTabClick }) => {
+  const festivalImageUrl = '../../train.jpg';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -16,7 +17,10 @@ const NavBar = ({ activeTab, handleTabClick }) => {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             {/* <Link href="/"> */}
-              <a className="text-white font-semibold text-lg">Your Logo</a>
+              {/* <a className="text-white font-semibold text-lg">Your Logo</a> */}
+             
+
+<img src={festivalImageUrl} className="h-8 w-auto mr-4" alt="Festival Logo" />
             {/* </Link> */}
           </div>
           <div className="flex md:hidden">
