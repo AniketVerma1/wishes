@@ -14,30 +14,31 @@ const CrewList = () => {
     { employeeId: '004', name: 'Json Smith', position: 'Engineer', department: 'Engineering', shift: 'Night', age: 28 },
     
   ];
+
   return (
-    <div>
+    <div className="overflow-x-auto">
       <h2 className="text-2xl font-semibold mb-4">Crew List</h2>
-      <div className="overflow-x-auto">
-        <table className="w-full table-auto">
-          <thead>
+      <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+        <table className="min-w-full divide-y divide-gray-200">
+          <thead className="bg-gray-50">
             <tr>
-              <th className="px-4 py-2">Employee ID</th>
-              <th className="px-4 py-2">Name</th>
-              <th className="px-4 py-2">Position</th>
-              <th className="px-4 py-2">Department</th>
-              <th className="px-4 py-2">Shift</th>
-              <th className="px-4 py-2">Age</th>
+              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Employee ID</th>
+              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Position</th>
+              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Department</th>
+              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Shift</th>
+              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Age</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="bg-white divide-y divide-gray-200">
             {crewData.map((crewMember, index) => (
-              <tr key={index} className={index % 2 === 0 ? 'bg-gray-100' : 'bg-white'}>
-                <td className="border px-4 py-2">{crewMember.employeeId}</td>
-                <td className="border px-4 py-2">{crewMember.name}</td>
-                <td className="border px-4 py-2">{crewMember.position}</td>
-                <td className="border px-4 py-2">{crewMember.department}</td>
-                <td className="border px-4 py-2">{crewMember.shift}</td>
-                <td className="border px-4 py-2">{crewMember.age}</td>
+              <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                <td className="px-6 py-4 whitespace-nowrap">{crewMember.employeeId}</td>
+                <td className="px-6 py-4 whitespace-nowrap">{crewMember.name}</td>
+                <td className="px-6 py-4 whitespace-nowrap">{crewMember.position}</td>
+                <td className="px-6 py-4 whitespace-nowrap">{crewMember.department}</td>
+                <td className="px-6 py-4 whitespace-nowrap">{crewMember.shift}</td>
+                <td className="px-6 py-4 whitespace-nowrap">{crewMember.age}</td>
               </tr>
             ))}
           </tbody>
@@ -48,4 +49,3 @@ const CrewList = () => {
 };
 
 export default CrewList;
-
