@@ -18,7 +18,7 @@ export default function Home() {
   
       <div>
       <Layout>
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto px-4 py-8">
         <CrewList />
       </div>
     </Layout>
