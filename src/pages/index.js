@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Layout from '@/components/Layout'
 import CrewList from '@/components/crew-management/crew-list'
-
+import Stocks from '@/components/stocks/stocks'
 
 
 
@@ -19,7 +19,8 @@ export default function Home() {
       <div>
       <Layout>
       <div className="container mx-auto px-4 py-8">
-        <CrewList />
+        {/* <CrewList /> */}
+        <Stocks/>
       </div>
     </Layout>
     </div>
