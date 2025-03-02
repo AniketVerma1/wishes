@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
 
   return (
     <div>
-      <NavBar activeTab={activeTab} handleTabClick={handleTabClick} />
+    {/* <NavBar activeTab={activeTab} handleTabClick={handleTabClick} /> */}
       {children}
     </div>
   );
